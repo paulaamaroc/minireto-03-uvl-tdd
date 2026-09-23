@@ -50,4 +50,32 @@
     La validación está expresada claramente. No hace falta cambiarla. 
 ---
 
-Copiad este bloque para cada ciclo.
+## Ciclo 3
+
+### Red
+- Prueba añadida: 
+    test_five_features_is_tiny()
+    test_six_features_is_small()
+- Técnica de diseño de pruebas empleada: 
+    TDD
+- Motivo de elegir este caso:
+    El test ya está escrito pero falta la implementación de la función que se quiere probar.
+- Fallo observado:
+    FAILED tests/test_size.py::test_six_features_is_small - AssertionError: assert 'tiny' == 'small'
+
+### Green
+- Código mínimo escrito:
+    def classify_model_size(feature_count: int) -> str:
+    if feature_count < 1:
+        raise ValueError("feature_count debe ser positivo")
+    if feature_count <= 5:
+        return "tiny"
+    return "small"
+- Resultado de las pruebas: 
+    7 passed
+
+### Refactor
+- Mejora realizada, o motivo por el que no era necesaria:
+    La validación está expresada claramente. No hace falta cambiarla. 
+---
+
